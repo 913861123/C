@@ -12,7 +12,7 @@ int main() {
 		printf("密码输入成功\n密码为：%s", password);
 	}
 	else if (ch == 'N') {
-		printf("密码输入取消\N");
+		printf("密码输入取消\n");
 	}
 	else {
 		printf("输入错误");
