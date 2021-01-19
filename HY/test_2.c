@@ -8,7 +8,7 @@ int main(){
 	printf("请输入要查找的那个数\n");
 	scanf("%d",&x);
 	while (left <= right){
-		int mid = (left + right) / 2;//每次二分查找都要从新确定范围，所以要把变量定义到循环里面
+		int mid = left+(right-left)/ 2;//每次二分查找都要从新确定范围，所以要把变量定义到循环里面
 		if (arr[mid] > x){
 			right = mid - 1;
 		}
