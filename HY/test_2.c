@@ -25,4 +25,4 @@ int main(){
 		printf("找不到这个数字");
 	}
 	return 0;
-}
+} 
