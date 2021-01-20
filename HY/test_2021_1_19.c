@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
 	int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	int cd = sizeof(arr) / sizeof(arr[0]);//计算数组元素个数
+	int cd = sizeof(arr) / sizeof(arr[0]);//sizeof计算的是数组的大小，单位是字节。
 	int left = 0;//左下标
 	int right = cd - 1;//右下标
 	int x=0;
