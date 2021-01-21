@@ -6,7 +6,7 @@ int shusu(int i){
 			return 0;
 		}
 	}
-	return 1;
+	return 1;//是素数返回1
 }
 int main(){
 	int i = 0;
