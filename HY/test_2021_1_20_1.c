@@ -18,5 +18,6 @@ int main(){
 			right--;
 
 	}
+	
 	return 0;
 }
