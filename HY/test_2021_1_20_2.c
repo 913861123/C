@@ -8,7 +8,7 @@ int main(){
 	scanf("%s", password2);
 	printf("密码设置成功\n请输入密码登录账号>\n");
 
-	for (i = 0; i < 3;i++){//当密码输入错误三次时退出
+	for (i = 0; i < 3;i++){//当密码输入错误三次时退出程序
 		scanf("%s", password);
 		if (strcmp(password, password2) == 0){//strcmp用来字符串之间的比较
 			printf("登录成功\n");
