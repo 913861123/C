@@ -13,7 +13,7 @@ int main(){
 	int number=0;
 	int x = 0;//使用rand之前,得使用srand设置一个随机起点 
 	srand((unsigned int)time(NULL));//NULL空指针，time用来生成时间戳，因为srand需要的是一个unsigned的整形所以，把time返回的time_t类型强制转换为（unsigned int）
-	number = rand() % 100+1;//把随机生成数变成1到100之间,rand是用来生成随机数的
+	number = rand() % 100+1;//把随机生成数变成1到100之间,rand用来生成随机数的
 	game();
 	
 	do{
