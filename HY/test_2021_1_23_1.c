@@ -9,7 +9,7 @@ int su(char* arr){//数组传过来的是首元素的地址
 }
 int main(){
 	char arr[] = "abcdef";
-	int x=su(&arr);//求字符串长度
+	int x=su(arr);//求字符串长度
 	printf("%d\n", x);
 	return 0;
 }
