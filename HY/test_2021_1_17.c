@@ -18,3 +18,4 @@ int main() {
 		printf("输入错误");
 	}
 	return 0;
+}
