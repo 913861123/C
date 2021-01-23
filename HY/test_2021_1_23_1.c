@@ -4,7 +4,7 @@ int su(char* arr){//数组传过来的是首元素的地址
 		return 1 + su(arr+1);//当arr读取的不是\0时下标加1
 	}
 	else{
-		return 0;
+		return 0;//当第一个字符是\0的时候返回0
 	}
 }
 int main(){
