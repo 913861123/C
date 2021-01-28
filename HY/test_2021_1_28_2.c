@@ -14,5 +14,6 @@ int main(){
 	printf("传递前\n%s\n%s\n", arr1, arr2);
 	my_strcpy(arr1,arr2);
 	printf("传递后\n%s\n%s\n", arr1, arr2);
+	
 	return 0;
 }
