@@ -29,6 +29,7 @@ int main()
 {
 	char arr1[] = "peaceS";
 	char arr2[] = "ace";
+	
 	printf("%s",my_strstr(arr1, arr2));
 
 	return 0;
