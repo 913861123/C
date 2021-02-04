@@ -10,7 +10,7 @@ char* my_strstr(const char* s1, const char* s2)
 	{
 		const char* p1 = sp;
 		const char* p2 = s2;
-		while ((*p1!=NULL)&&(*p2!=NULL)&&(*p1==*p2))
+		while ((*p1)&&(*p2)&&(*p1==*p2))//当p1和p2没有指向\0时
 		{
 			p1++;
 			p2++;
