@@ -36,7 +36,7 @@ int main()
 	int ret = 0;
 	int input = 0;
 
-	int(*calculator[])(int, int) = { 0, Add, Sub, Mul, Div };//函数指针数组
+	int(*calculator[])(int, int) = { 0, Add, Sub, Mul, Div };//函数指针数组（转移表）
 	
 	do
 	{
