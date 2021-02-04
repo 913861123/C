@@ -23,5 +23,6 @@ int main()
 	//len = (*pd)(arr);
 	len = pd("123456789");//调用函数指针时可以不解引用
 	printf("%d\n", len);
+	
 	return 0;
 }
