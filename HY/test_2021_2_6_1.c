@@ -25,6 +25,7 @@ int main()
 	printf("输入要找的那个数\n");
 	scanf("%d", &x);
 	int ret = matrix(arr,x,3,5);
+	
 	if (1 == ret)
 		printf("找到了\n");
 	else
