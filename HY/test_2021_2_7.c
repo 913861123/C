@@ -45,7 +45,7 @@ void _swp(char* jh1, char* jh2,int width)//交换元素位置
 void maopao_qsort(void *base,//待排序数据的起始位置
 				 size_t num,//数组元素的个数
 				 size_t width,//每个元素的大小
-				 int(*cmp)(const void* s1, const void* s2))//自定义交换函数
+				 int(*cmp)(const void* s1, const void* s2))//自定义比较大小函数
 {
 
 	size_t i = 0;
