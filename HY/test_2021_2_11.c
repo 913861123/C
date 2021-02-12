@@ -4,6 +4,7 @@
 
 void* my_memmove(void* dest, const void* src, size_t count)
 {
+	void* ret = dest;
 	assert(dest && src);
 
 	if (dest < src)
@@ -18,19 +19,20 @@ void* my_memmove(void* dest, const void* src, size_t count)
 	}
 	else//如果dest的起始地址等于或大于src的地址
 	{//从后向前拷贝
-		
+
 		while (count--)
 		{
-			*((char*)dest+count) = *((char*)src+count);
+			*((char*)dest + count) = *((char*)src + count);
 		}
 	}
+	return ret;
 }
 
 int main()
 {
 	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	my_memmove(arr+1,arr,16 );
-	
+	my_memmove(arr, arr+3, 20);
+
 	int i = 0;
 	for (i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
 	{
