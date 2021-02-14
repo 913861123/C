@@ -21,5 +21,6 @@ int main()
 	{
 		printf("%c", arr[i]);
 	}
+	
 	return 0;
 }
