@@ -22,5 +22,6 @@ int main()
 	printf("请输入要求的第n个斐波那契数\n");
 	scanf("%d", &n);
 	printf("第%d个斐波那契数为%d",n,Fibonacci(n));
+	
 	return 0;
 }
