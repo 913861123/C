@@ -5,6 +5,7 @@ unsigned int conte_one(unsigned int x)
 {
 	unsigned int conte = 0;
 	unsigned int p = 1;
+	
 	while (x!=0)
 	{
 		if (1 == (p & x))//当数字二进制最后一位为1时计数器加加
