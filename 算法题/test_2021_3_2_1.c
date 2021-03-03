@@ -1,31 +1,39 @@
 #include <stdio.h>
-#include <string.h>
+#include <assert.h>
 
-char one_char(const char* arr, int leng)
+char one_char(const char* ch, int leng)
 {
+	assert(ch != NULL && leng > 0);
+	if (1 ==  leng)
+	{
+		return ch[0];
+	}
 	int i = 0;
 	int j = 0;
-	int conte = 0;
-	for (i = 0; i < leng - 1; i++)
+	int cont = 0;
+	for (i = 0; i < leng-1; i++)
 	{
-		for (j = i + 1; j < leng - i; j++)
+		cont = 0;
+		for (j = i + 1; j < leng - i-1; j++)
 		{
-			if (arr[i] != arr[j])
+			if (ch[i] == ch[j])
 			{
-				conte++;
+				cont++;
+				
 			}
 		}
-		if (conte > leng - i)
+		if (0==cont)
 		{
-			return arr[i];
+			return ch[i];
 		}
+
 	}
 }
 
 int main()
 {
-	char arr[] = "abccerrlcowswb";
-	char ret = one_char(arr, strlen(arr));
+	char ch[] = "abaccdeff";
+	char ret = one_char(ch, sizeof(ch) / sizeof(ch[0]));
 
 	printf("%c", ret);
 	return 0;
