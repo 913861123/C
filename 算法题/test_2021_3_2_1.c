@@ -36,5 +36,6 @@ int main()
 	char ret = one_char(ch, sizeof(ch) / sizeof(ch[0]));
 
 	printf("%c", ret);
+	
 	return 0;
 }
