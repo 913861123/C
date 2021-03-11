@@ -58,7 +58,7 @@ void test()
 		default:
 			printf("选择错误，请从新选择\n");
 			break;
-		}
+		}		
 	} while (input);
 
 }
@@ -66,6 +66,7 @@ void test()
 
 int main()
 {
+	
 	test();
 
 	return 0;

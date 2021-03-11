@@ -38,6 +38,7 @@ void ShowContact(const struct contact* pc)
 	{
 		printf("ͨѶ¼Ϊ��\n");
 	}
+	
 	else
 	{
 		int j = 0;
