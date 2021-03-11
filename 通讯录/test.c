@@ -50,6 +50,7 @@ void test()
 			FindContact(&con);
 			break;
 		case RANGK:
+			
 			break;
 		case EXIT:
 			printf("成功退出通讯录\n");

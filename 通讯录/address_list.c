@@ -6,7 +6,7 @@ void Initialize(struct contact* pc)
 {
 	pc->people = 0;
 	memset(pc->data, 0, sizeof(pc->data));
-	
+
 }
 
 void AddContact(struct contact* pc)
@@ -18,7 +18,7 @@ void AddContact(struct contact* pc)
 	else
 	{
 		printf("输入要添加的姓名:>");
-		scanf("%s",pc->data[pc->people].name);
+		scanf("%s", pc->data[pc->people].name);
 		printf("性别:>");
 		scanf("%s", pc->data[pc->people].sex);
 		printf("年龄:>");
@@ -41,7 +41,7 @@ void ShowContact(const struct contact* pc)
 	else
 	{
 		int j = 0;
-		printf("%-15s\t%-15s\t%-15s\t%-15s\t%-15s\n", "姓名", "性别","年龄","电话","住址");
+		printf("%-15s\t%-15s\t%-15s\t%-15s\t%-15s\n", "姓名", "性别", "年龄", "电话", "住址");
 		for (j = 0; j < pc->people; j++)
 		{
 			printf("%-15s\t%-15s\t%-15d\t%-15s\t%-15s\n",
@@ -55,17 +55,17 @@ void ShowContact(const struct contact* pc)
 }
 
 //查找通讯录联系人
-static int LookupContact(const struct contact* pc,char* name)
+static int LookupContact(const struct contact* pc, char* name)
 {//然此函数只能在本文件内使用
 	int i = 0;
-	for(i=0;i<pc->people-1;i++)
+	for (i = 0; i < pc->people; i++)
 	{
 		if (strcmp(pc->data->name, name) == 0)
 		{
 			return i;
 		}
 	}
-	
+	//没找到时
 	return -1;
 }
 
@@ -142,7 +142,7 @@ void FindContact(const struct contact* pc)
 		char name[NAME_MAX];
 		printf("请输入要查找联系人的姓名:>");
 		scanf("%s", name);
-		int ret = LookupContact(pc,name);
+		int ret = LookupContact(pc, name);
 		if (-1 == ret)
 		{
 			printf("通讯录中没有此联系人\n");
