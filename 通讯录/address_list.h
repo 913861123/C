@@ -42,3 +42,6 @@ void AmendContact(struct contact* pc);
 
 //查找联系人
 void FindContact(const struct contact* pc);
+
+//按名字排序联系人
+void RangkContact(struct contact* pc);

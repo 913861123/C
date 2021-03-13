@@ -36,9 +36,8 @@ void ShowContact(const struct contact* pc)
 {
 	if (0 == pc->people)
 	{
-		printf("通讯录为空\n");
+		printf("打印失败，通讯录为空\n");
 	}
-	
 	else
 	{
 		int j = 0;
@@ -61,12 +60,12 @@ static int LookupContact(const struct contact* pc, char* name)
 	int i = 0;
 	for (i = 0; i < pc->people; i++)
 	{
-		if (strcmp(pc->data->name, name) == 0)
+		if (strcmp(pc->data[i].name, name) == 0)
 		{
 			return i;
 		}
 	}
-	//没找到时
+
 	return -1;
 }
 
@@ -159,5 +158,24 @@ void FindContact(const struct contact* pc)
 				pc->data[ret].phone,
 				pc->data[ret].address);
 		}
+	}
+}
+
+//按名字排序通讯录
+int name_sort(const void* s1, const void* s2)
+{
+	return strcmp(((struct contact*)s1)->data->name, ((struct contact*)s2)->data->name);
+}
+
+void RangkContact(struct contact* pc)
+{
+	if (pc->people == 0)
+	{
+		printf("通讯录为空无法排序\n");
+	}
+	else
+	{
+		qsort(pc->data, pc->people, sizeof(pc->data[0]), name_sort);
+		printf("按名字排序通讯录成功\n");
 	}
 }
