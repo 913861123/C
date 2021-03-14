@@ -5,7 +5,7 @@ int main() {
 	scanf("%s", password);//数组本来就是地址，所以不用取址符
 	int ch = 0;//因为getchar可能会返回EOF,EOF=-1所以要用int
 	while (ch = getchar() != '\n') {//清除缓冲区
-	}
+	}//getchar成功时为获得的字符，失败时为 EOF
 	printf("确认密码Y/N ");
 	ch = getchar();//获取一个字符
 	if (ch == 'Y') {
