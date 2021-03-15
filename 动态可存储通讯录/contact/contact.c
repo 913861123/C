@@ -27,8 +27,10 @@ void AddContact(struct contact* pc)
 		}
 		else
 		{
-			printf("通讯录扩容成功\n");
+			//把ptr的地址赋给data
+			pc->data = ptr;
 			pc->cont+= 2;//扩容增加两个联系人空间
+			printf("通讯录扩容成功\n");
 		}
 	}
 	
