@@ -1,7 +1,7 @@
 #include "contact.h"
 
 //判断通讯录是否要增容
-void dilatation(contact* pc)
+int dilatation(contact* pc)
 {
 	if (pc->people == pc->cont)
 	{
@@ -10,15 +10,17 @@ void dilatation(contact* pc)
 		if (ptr == NULL)
 		{
 			printf("通讯录扩容失败\n");
-			return;
+			return 0;
 		}
 		else
 		{
 			pc->data = ptr;
 			pc->cont += 2;//扩容增加两个联系人空间
 			printf("通讯录扩容成功\n");
+			return 0;
 		}
 	}
+	return 1;
 }
 
 void ReadContact(contact* pc)
@@ -35,7 +37,12 @@ void ReadContact(contact* pc)
 	while (fread(&tmp, sizeof(information), 1, pfIn))//fread返回的是读取文件信息的个数，当没有读取到时候返回0
 	{
 		//判断通讯录是否要增容
-		dilatation(pc);
+		if(dilatation(pc)==0)
+		{
+			printf("通讯录初始化失败\n");
+			return;
+		}
+		
 		//导入信息
 		pc->data[pc->people] = tmp;
 		pc->people++;
@@ -64,8 +71,11 @@ void Initialize(struct contact* pc)
 //动态新增联系人
 void AddContact(struct contact* pc)
 {
-		dilatation(pc);//判断通讯录是否要增容
-		
+		if(dilatation(pc);)//判断通讯录是否要增容
+		{
+			printf("空间不够，增加容量失败");
+			return;
+		}
 		printf("请输入添加联系人的姓名:>");
 		scanf("%s", pc->data[pc->people].name);
 		printf("性别:>");
